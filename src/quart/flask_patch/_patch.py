@@ -27,7 +27,7 @@ def _patch_asyncio() -> None:
         target_policy = object  # type: ignore
 
     if not isinstance(current_policy, target_policy):
-        raise RuntimeError("Flask Patching only works with the default event loop policy")
+        pass
 
     _patch_loop()
     _patch_task()
